@@ -53,7 +53,7 @@ libc++.tbd
 
 * Build your app using:
 
-* ionic cordova Build ios --device
+ionic cordova Build ios --device
 
 * Run your app using:
 ionic cordova run ios --device
