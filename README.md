@@ -47,17 +47,20 @@ libc++.tbd
 
 * Do ionic serve to check your app on safari
 
-Connect your phone using an USB cable.
+* Connect your phone using an USB cable.
 
-Check for USB debugging is activated!
+* Check for USB debugging is activated!
 
-Build your app using:
+* Build your app using:
 
-ionic cordova Build ios --device
+* ionic cordova Build ios --device
 
-Run your app using:
+* Run your app using:
 ionic cordova run ios --device
 
-Debug/Inspect your app on the console going to: Safari --> Develop --> Your iphone 
+* Debug/Inspect your app on the console going to: Safari --> Develop --> Your iphone 
+
+* Check clobbers tag inside plugin.xml to know the plugin name(also check Plugin ID & activity tag of ios to make sure plugin is loaded during your build) and related conversation.js file to know what function is called along with the plugin usage.
+ex: 'cordova.videoconversation' is the clobbers element and 'open' is the function called in conversation.js
 
 Happy Coding! :)
