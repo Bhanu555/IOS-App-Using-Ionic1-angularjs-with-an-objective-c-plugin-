@@ -24,7 +24,7 @@ https://github.com/jundato/cordova-plugin-twilio-video-ios
 
 * Next add the plugin,command to install Plugin for ionic1/angularjs :
 
-ionic cordova plugin add (Path/to/plugin)
+ionic cordova plugin add [Path/to/plugin]
 
 * copy index.html and app.js( with ng-controller function)
 
