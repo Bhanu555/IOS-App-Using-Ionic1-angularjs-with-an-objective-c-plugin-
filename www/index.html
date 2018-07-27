@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
-
-    <link rel="manifest" href="manifest.json">
-
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
-
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-  </head>
-  <body ng-app="starter">
-
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
-  </body>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+                <title></title>
+                <link rel="manifest" href="manifest.json">
+                    <!-- un-comment this code to enable service worker
+                     <script>
+                     if ('serviceWorker' in navigator) {
+                     navigator.serviceWorker.register('service-worker.js')
+                     .then(() => console.log('service worker installed'))
+                     .catch(err => console.log('Error', err));
+                     }
+                     </script>-->
+                    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+                        <link href="css/style.css" rel="stylesheet">
+                            <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+                             <link href="css/ionic.app.css" rel="stylesheet">
+                             -->
+                            <!-- ionic/angularjs js -->
+                            <script src="lib/ionic/js/ionic.bundle.js"></script>
+                            <!-- cordova script (this will be a 404 during development) -->
+                            <script src="cordova.js"></script>
+                            <!-- your app's js -->
+                            <script src="js/app.js"></script>
+                            <script src="https://media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
+                            
+                            </head>
+    <body ng-app="starter">
+        <ion-pane>
+            <ion-header-bar class="bar-stable">
+                <h1 class="title">Ionic HOLA Starter</h1>
+            </ion-header-bar>
+            <ion-view class="app-tab" hide-nav-bar="true" view-title="Support">
+                <ion-content ng-controller="ExampleController">
+                    <h3 class="tab-header-text">Live Video Support</h3>
+                    <div id="call-connected"> Twilio Programmable Video Chat</div>
+                    
+                    <div id="controls">
+                        <div id="preview" style="float:left;">
+                            <div id="local-media" width ="100px" ></div>
+                            
+                            <button id="button-preview" style="margin-left:40px;">Preview My Camera</button>
+                            <button id="JoinRoom" style="margin-left:40px;">Join the Room</button> </div> <br>
+                        <button id="LeaveRoom" style="margin-left:40px;">Leave the Room</button>
+                        
+                        
+                    </div>
+                    <div id="call-controls" class="call-button-div">
+                        <i id="button-call" class="icon ion-ios-telephone-outline call-buttons" style="color:green;"></i>
+                        <i id="button-call-end" class="icon ion-ios-telephone-outline call-buttons" style="color:red; display:none;"></i>
+                        
+                    </div>
+                    </div>
+                    <div id="spin-wrapper"><ion-spinner name="circles"></ion-spinner></div>
+                    
+                    <div id="remote-media">
+                        <div id="video-overlay">Inmate Name</div>
+                        
+                    </div>
+                    
+                </ion-content>
+            </ion-view>
+        </ion-pane>
+        
+        
+    </body>
 </html>
+
+
